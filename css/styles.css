@@ -1,9 +1,63 @@
-body {
+/*body {
 
-	background-color: #ff0000; /*New company color*/
+	
+}*/
+nav {
+	height: 100px;     /*you do not normally give a height */
+	background-color: #333333;
+}
+main {
+/*	min-height: 500px;   instead of this selector; we have the main:after selector below */ 
+	background-color: orange;
+	width: 1280px;   /*has to be less than 1366px in a non-dynamic site   */
+	margin: 0 auto;   /*0 top & bottom, auto left & right - to center container  */
+}
 
-	/*This is a comment line in a css file.*/
+main > img {     /* applies to the image that is the first descendant of main */
+	float: left;
+}
+h2 {
+	clear: both;
+}
+/*#product1,
+#product2,
+#product3     	 for the 3 articles using their ids     */
 
+.product {
+	height: 300px;
+	background-color: red;
+	margin-right: 25.5px;
+	width: 32%;
+	float: left;
+}
+#product3 {
+	margin-right: 0;
+}
 
-
+/* so that we do not have to state min-height or height to the main container   */
+main:after {
+	content: '';
+	display: block;
+	clear: both;
+/*	background-color: pink;*/
+}
+.post {
+	height: 600px;
+	margin-bottom: 10px;
+	background-color: yellow;
+/*	width: 844px; anything inside the parent posts will have the same width as the parent */
+}
+.side {
+	height: 200px;
+	background-color: blue;
+	margin: 10px;
+/*	width: 410px ; anything inside the parent sidebar will have the same width as the parent */
+}
+#posts {
+	float: left;
+	width: 844px;
+}
+#sidebar {
+	float: right;
+	width: 410px ;
 }
